@@ -5,12 +5,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/berita', function () {
+    return view('berita');
+});
 Route::get('/profile', function () {
-    return view('halaman profile');
+    return view('profile');
 });
-Route::get('/kontak', function () {
-    return view('halaman kontak');
-});
-Route::get('/gallery', function () {
-    return view('halaman berita');
+Route::get('/contact', function () {
+    return view('contact');
 });
