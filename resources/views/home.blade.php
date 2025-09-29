@@ -1,50 +1,107 @@
+<?php
+// --- Data Home disimpan di array PHP ---
+$home = [
+  "judul" => "Selamat Datang di FilmKU.ID",
+  "deskripsi" => "Temukan berbagai informasi, berita, dan Film menarik di sini",
+  "link" => "#",
+  "tombol" => "Jelajahi Sekarang"
+];
+
+?>
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FilmKu.ID | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #0f0f0f;
+        color: #ffffff;
+      }
+      /* Navbar */
+      .navbar {
+        background-color: #1c1c1c;
+      }
+      .navbar .nav-link {
+        color: #ffffff !important;
+        font-weight: 500;
+        margin: 0 10px;
+      }
+      .navbar .nav-link:hover {
+        color: #fbc02d !important;
+      }
 
-    <title>Halaman Home</title>
+      /* Hero Section */
+      .hero {
+        min-height: 90vh;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                    url('https://source.unsplash.com/1600x900/?technology,cinema') no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 50px 20px;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+      }
+      .hero .btn-custom {
+        background-color: #fbc02d;
+        color: #000;
+        font-weight: bold;
+        border-radius: 30px;
+        padding: 12px 30px;
+      }
+      .hero .btn-custom:hover {
+        background-color: #ffc107;
+        color: #000;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #1c1c1c;
+        color: #aaa;
+      }
+    </style>
   </head>
   <body>
-    <h1>Halaman Home</h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand font-weight-bold" href="#">FilmKu.ID</a>
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="berita">Berita</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1><?php echo $home['judul']; ?></h1>
+        <p><?php echo $home['deskripsi']; ?></p>
+        <a href="<?php echo $home['link']; ?>" class="btn btn-custom">
+          <?php echo $home['tombol']; ?>
+        </a>
+      </div>
+    </section>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
+    <!-- Footer -->
+    <footer class="text-center p-3 mt-5">
+      &copy; <?php echo date("Y"); ?> FilmKu.ID | All Rights Reserved
+    </footer>
   </body>
-
-  <div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
 </html>
