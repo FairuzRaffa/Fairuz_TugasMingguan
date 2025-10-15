@@ -1,26 +1,13 @@
 <?php
 
-use App\Models;
-use Illuminate\Support\Facades\Route;
+namespace App\Models;
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "home",
-    ]);
-});
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-Route::get('/profile', function () {
-    return view('profile',[
-        "title" => "profile",
-        "nama" => "Fairuz Raffa",
-        "nohp" => "089618459602",
-        "foto" => "img/fairuz.jpg",
-    ]);
-});
-
-Route::get('/berita', function () {
-
-    $data_berita = [
+class Berita extends Model
+{
+    private static $data_berita = [
         [
             "judul" => "Persib Bandung",
             "slug" =>  "persib-bandung",
@@ -40,22 +27,23 @@ Route::get('/berita', function () {
             "konten" => "Chelsea juga merupakan satu-satunya klub asal London yang berhasil meraih gelar juara Liga Champions UEFA dan Piala Dunia Antarklub FIFA.",
         ],
     ];
-    $new_berita = [];
 
-    foreach($data_berita as $berita) {
-        if($berita["slug"] === $slug) {
-            $new_berita = $berita; /// $berita => [judul,slug,penulis,konten]
-        }
+    public static function ambildata()
+    {
+        return $self(self::$data_berita);
     }
 
-    return view('singleberita', [
-        "title" => "berita",
-        "new_berita" => $new_berita,
-    ]);
-});
+    public static function caridata($slug)
+    {
+        $data_berita = $self::$data_berita;
 
-Route::get('/contact', function () {
-    return view('contact', [
-        "title" => "contact",
-    ]);
-});
+        $new_berita = [];
+
+        foreach ($data_berita as $berita) {
+            if ($berita["slug"] === $slug) {
+                $new_berita = $berita; /// $berita => [judul,slug,penulis,konten]
+            }
+        }
+        return $new_berita;
+    }
+}
