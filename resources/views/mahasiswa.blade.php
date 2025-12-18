@@ -4,10 +4,15 @@
 
 @section('content')
 <h1 class="text-center"> Data Mahasiswa</h1>
-    <div class="row">
-      <a href="/tambahmahasiswa">
-        <button type="button" class="btn btn-success">Tambah Data</button>
-        <table class="table">
+  <div class="row">
+    <a href="/tambahmahasiswa" class="btn btn-success mb-3">
+    Tambah Data
+    </a>
+
+  <table class="table">
+
+
+
 @if ($message = Session::get('success'))
 
      <script>
@@ -48,7 +53,7 @@
         <td>
             <a href="tampildata/{{ $mahasiswa['id'] }}" 
             class="btn btn-primary">EDIT</a>
-            <a href="a" class="btn btn-danger delete"
+            <a href="#" class="btn btn-danger delete"
              data-id="{{ $mahasiswa['id'] }}" data-nama="{{
               $mahasiswa['nama'] }}">HAPUS</a>
         </td>
@@ -69,9 +74,11 @@
 $('.delete').click( function(){
          
   let id = $(this).attr('data-id');
+  let nama = $(this).attr('data-nama');
+
   
   Swal.fire({
-  title:"Tenane Gok?"
+  title:"Tenane Gok?",
   text: "Data " + nama + " bakal dihapus, Yakin?",
   icon: "warning",
   showCancelButton: true,
@@ -80,7 +87,7 @@ $('.delete').click( function(){
   confirmButtonText: "Yes, delete it!"
 }).then((result) => {
   if (result.isConfirmed) {
-    window.location = "/deletedata/"+id+;
+    window.location = "/deletedata/"+id;
   }
 });
 });
