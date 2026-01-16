@@ -2,107 +2,108 @@
 
 @section('content')
 <div class="container py-5">
-    <div class="row">
+
+    <div class="row g-4">
+        <!-- LEFT PROFILE -->
         <div class="col-lg-4">
-            <div class="card border-0 shadow">
-                <div class="card-body text-center">
-                    <img src="{{ asset('img/fairuz.jpg') }}" alt="Foto Profil" class="rounded-circle img-thumbnail mb-3" style="width: 150px; height: 150px; object-fit: cover;">
-                    <h3 class="card-title mb-3">{{ $nama }}</h3>
-                    <div class="text-muted mb-4">
-                        <i class="fas fa-graduation-cap me-2"></i>Teknologi Informasi - Universitas Muhammadiyah Semarang
-                    </div>
-                    <div class="d-flex justify-content-center mb-4">
-                        <a href="#" class="btn btn-primary mx-2">
-                            <i class="fab fa-linkedin me-2"></i>LinkedIn
-                        </a>
-                        <a href="#" class="btn btn-dark mx-2">
-                            <i class="fab fa-github me-2"></i>GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-0 shadow mt-4">
+            <div class="card profile-card border-0 shadow-sm text-center">
+                <div class="profile-header"></div>
+
                 <div class="card-body">
-                    <h5 class="card-title mb-3"><i class="fas fa-address-card me-2"></i>Contact Information</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <i class="fas fa-phone text-primary me-2"></i>
-                            {{ $nohp }}
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-envelope text-primary me-2"></i>
+                    <img src="{{ asset('img/fairuz.jpg') }}" 
+                         class="rounded-circle profile-img shadow"
+                         alt="Foto Profil">
+
+                    <h4 class="fw-bold mt-3 mb-1">{{ $nama }}</h4>
+                    <p class="text-muted small mb-3">
+                        Teknologi Informasi · Universitas Muhammadiyah Semarang
+                    </p>
+
+                    <div class="d-flex justify-content-center gap-2 mb-4">
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-dark btn-sm">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
+                    <div class="text-start small">
+                        <p class="mb-2">
+                            <i class="fas fa-phone me-2 text-primary"></i>{{ $nohp }}
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
                             fairuzalif102@gmail.com
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
                             Semarang, Indonesia
-                        </li>
-                    </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        
+
+        <!-- RIGHT CONTENT -->
         <div class="col-lg-8">
-            <div class="card border-0 shadow mb-4">
+            <!-- ABOUT -->
+            <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
-                    <h5 class="card-title mb-4"><i class="fas fa-user me-2"></i>About Me</h5>
-                    <p class="lead">
-                        Mahasiswa Teknologi Informasi yang bersemangat dalam pengembangan web dan teknologi modern.
-                    </p>
-                    <p>
-                        Saya adalah seorang mahasiswa yang fokus pada pengembangan aplikasi web dengan Laravel
-                        dan teknologi terkini. Selalu antusias untuk belajar hal-hal baru dan
-                        mengimplementasikan solusi kreatif untuk berbagai tantangan pemrograman.
+                    <h5 class="fw-bold mb-3">About Me</h5>
+                    <p class="mb-0 text-muted">
+                        Mahasiswa Teknologi Informasi yang fokus pada pengembangan web modern,
+                        khususnya Laravel. Tertarik membangun solusi digital yang
+                        sederhana, efektif, dan scalable.
                     </p>
                 </div>
             </div>
 
-            <div class="card border-0 shadow mb-4">
+            <!-- SKILLS -->
+            <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
-                    <h5 class="card-title mb-4"><i class="fas fa-laptop-code me-2"></i>Skills</h5>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <h6>HTML & CSS</h6>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" style="width: 85%">85%</div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <h6>JavaScript</h6>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" style="width: 75%">75%</div>
-                                </div>
-                            </div>
+                    <h5 class="fw-bold mb-4">Skills</h5>
+
+                    <div class="skill-item mb-3">
+                        <span>HTML & CSS</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:85%"></div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <h6>PHP & Laravel</h6>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" style="width: 80%">80%</div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <h6>MySQL</h6>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" style="width: 70%">70%</div>
-                                </div>
-                            </div>
+                    </div>
+
+                    <div class="skill-item mb-3">
+                        <span>JavaScript</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item mb-3">
+                        <span>PHP & Laravel</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>MySQL</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:70%"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card border-0 shadow">
+            <!-- EDUCATION -->
+            <div class="card border-0 shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title mb-4"><i class="fas fa-award me-2"></i>Education</h5>
-                    <div class="timeline">
-                        <div class="timeline-item mb-4">
-                            <h6 class="fw-bold">Universitas Muhammadiyah Semarang</h6>
-                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i>2021 - Present</p>
-                            <p>Teknologi Informasi</p>
-                        </div>
+                    <h5 class="fw-bold mb-3">Education</h5>
+                    <div>
+                        <h6 class="mb-1 fw-semibold">Universitas Muhammadiyah Semarang</h6>
+                        <p class="text-muted small mb-0">
+                            <i class="fas fa-calendar-alt me-2"></i>2021 – Present
+                        </p>
+                        <p class="mb-0 small">Teknologi Informasi</p>
                     </div>
                 </div>
             </div>
@@ -110,5 +111,44 @@
     </div>
 </div>
 
+{{-- Custom Style --}}
+<style>
+    .profile-card {
+        overflow: hidden;
+    }
 
+    .profile-header {
+        height: 120px;
+        background: linear-gradient(135deg, #0d6efd, #6610f2);
+    }
+
+    .profile-img {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        margin-top: -55px;
+        border: 4px solid #fff;
+    }
+
+    .progress {
+        height: 6px;
+        border-radius: 10px;
+        background-color: #e9ecef;
+    }
+
+    .progress-bar {
+        background: linear-gradient(135deg, #0d6efd, #6610f2);
+    }
+
+    .skill-item span {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .card {
+        border-radius: 16px;
+    }
+</style>
 @endsection

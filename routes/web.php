@@ -58,8 +58,8 @@ Route::get('/deletedata/{id}', [MahasiswaController::class, 'deletedata'] )->nam
 
 
 Route::get('/kontak', function () {
-    return view('kontak', [
-        "title" => "Kontak",
+    return view('contact', [
+        "title" => "contact",
         "img" => "img/anaf.png"
     ]);
 });
