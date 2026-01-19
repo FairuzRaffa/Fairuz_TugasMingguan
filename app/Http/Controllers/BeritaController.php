@@ -4,21 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Berita;
-
 class BeritaController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('berita', [
             "title" => "berita",
-            "berita" => Berita::ambildata(),
+            "beritas" => Berita::ambildata(),
         ]);
     }
 
-    public function tampildata ($slug) {
+    public function tampildata ($slugp) {
 
-    return view('singleberita', [
-        "title" => "Berita",
-        "new_berita" => Berita::caridata($slug),
+    return view ('singleberita', [
+        "new_berita" => Berita::caridata($slugp),
     ]);
-    }
+}
 }

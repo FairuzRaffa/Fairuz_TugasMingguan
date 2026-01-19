@@ -1,42 +1,81 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@extends('layouts.main')
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+@section('content')
+<section class="contact-section py-5">
+    <div class="container">
+        
+        <!-- HEADER -->
+        <div class="text-center mb-5">
+            <h1 class="fw-bold text-white">Contact Us</h1>
+            <p class="text-muted">
+                Punya pertanyaan atau masukan? Silakan hubungi kami melalui form atau kontak di bawah.
+            </p>
+        </div>
 
-    <title>TI UNIMUS | HOME</title>
-  </head>
-  <body>
-    <ul class="nav justify-content-center "style="background-color: #0c424aff;">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="berita">Berita</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="profile">Profil</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="contact">Kontak</a>
-  </li>
-</ul>
+        <div class="row g-4">
+            
+            <!-- FORM -->
+            <div class="col-md-6">
+                <div class="card contact-card p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Nama</label>
+                            <input type="text" class="form-control" placeholder="Masukkan nama Anda">
+                        </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Masukkan email Anda">
+                        </div>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+                        <div class="mb-3">
+                            <label class="form-label">Pesan</label>
+                            <textarea class="form-control" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+                        </div>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
+                        <button class="btn btn-primary w-100">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- INFO KONTAK -->
+            <div class="col-md-6">
+                <div class="card contact-card p-4 h-100">
+                    <h5 class="fw-bold mb-3">Informasi Kontak</h5>
+
+                    <p class="mb-2">
+                        📍 <strong>Alamat:</strong><br>
+                        Jl. Kebayoran Lama No.123, Jakarta Selatan, Indonesia
+                    </p>
+
+                    <p class="mb-2">
+                        📞 <strong>Telepon:</strong><br>
+                        <a href="tel:081234567890" class="contact-link">0812-3456-7890</a>
+                    </p>
+
+                    <p class="mb-3">
+                        💬 <strong>WhatsApp:</strong><br>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="contact-link">
+                            Chat via WhatsApp
+                        </a>
+                    </p>
+
+                    <!-- MAPS -->
+                    <div class="map-box mt-3">
+                        <iframe 
+                            src="https://www.google.com/maps?q=Jakarta&output=embed"
+                            width="100%" height="200"
+                            style="border:0; border-radius:12px;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+@endsection

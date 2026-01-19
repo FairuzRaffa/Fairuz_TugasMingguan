@@ -2,42 +2,34 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-
 use App\Models\Mahasiswa;
-
 
 class MahasiswaController extends Controller
 {
     public function index()
     {
+
+        $data = Mahasiswa::all();
+
        
-         $data = Mahasiswa::all();
-
-        return view('mahasiswa', compact('data'), [
-            "title" =>"Data Mahasiswa"
-
-           
-
-
+        return view('Mahasiswa', compact('data'),[
+            "title" => "Data Mahasiswa",
             
         ]);
     }
-
     public function tambahmahasiswa()
     {
-        return view('tambahmahasiswa', 
-        [
-            "title" => "Tambah Data Mahasiswa"
+        return view('tambahmahasiswa',[
+            "title" => "Tambah Data Mahasiswa",
         ]);
     }
 
     public function insertdata(Request $request)
     {
-            $data = Mahasiswa::create($request->all());
+        $data = Mahasiswa::create($request->all());
 
-           return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Ditambahkan!!!');
+        return redirect()->route('datamahasiswa')->with('success', 'Data Berhasil Di Tambahkan');
     }
 
     public function tampildata($id)
@@ -45,7 +37,7 @@ class MahasiswaController extends Controller
         $data = Mahasiswa::find($id);
 
         return view("edit", [
-            "title" => "Edit Data Mahasiswa",
+            "title" => "Edit Mahasiswa",
             "data" => $data,
         ]);
     }
@@ -54,19 +46,17 @@ class MahasiswaController extends Controller
     {
         $data = Mahasiswa::find($id);
 
-       $data->update($request->all());
+        $data->update($request->all());
 
-            return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Diedit!!!');        
+        return redirect()->route('datamahasiswa')->with('success', 'Data Berhasil Di Edit!');
     }
 
-    public function deletedata($id)
-    {
-        $data = Mahasiswa::find($id);
-
-        $data->delete();
-
-        return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Dihapus!!!');  
-    }
-
+public function delete($id)
+{
+    $data = Mahasiswa::find($id);
+    $data->delete();
+    
+    return redirect('/datamahasiswa')->with('success', 'Data Berhasil Dihapus!');
+}
 
 }

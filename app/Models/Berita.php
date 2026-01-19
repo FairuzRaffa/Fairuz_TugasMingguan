@@ -7,47 +7,41 @@ use Illuminate\Database\Eloquent\Model;
 
 class Berita extends Model
 {
-    private static $data_berita = [
+       private static $data_berita = [
         [
-            "judul" => "Persib Bandung",
-            "slug" =>  "persib-bandung",
-            "penulis" => "alif",
-            "konten" => "Persib Bandung Memenangkan pertandingan melawan Bangkok United dengan skor 2-0 di ajang AFC Cup 2025."
+        "judul" => "Pekalongan",
+        "slug" => "pekalongan",
+        "penulis" => "PERSIP",
+        "konten" => "PERSIP (Persatuan Sepak Bola Indonesia Pekalongan) adalah klub sepak bola Indonesia yang bermarkas di Kota Pekalongan. Tim ini berkompetisi di Liga 4."
         ],
+        
         [
-            "judul" => "Persip Pekalongan",
-            "slug" => "persip-pekalongan",
-            "penulis" => "fairuz",
-            "konten" => "Persatuan Sepak Bola Indonesia Pekalongan atau Persip Pekalongan adalah klub sepak bola Indonesia dari Kota Pekalongan yang bermain di Liga 3. Persip Pekalongan berdiri tahun 1955. Persip Pekalongan memiliki julukan Laskar Kalong. Tim Kebanggaan Masyarakat Pantura ini biasa di kenal dengan sebutan (Pekalongan Raya) yang meliputi Kota Pekalongan, Kabupaten Pekalongan, Daerah Kajen. Persip Pekalongan memiliki suporter fanatik Brigata Batik City, Kalong Mania, Sneper, dan Batbois. Tim ini bermarkas di Stadion Jenderal Hoegeng (Kompleks Olah Raga Kraton) Kota Pekalongan",
-
-        ],
-        [
-            "judul" => "Chelsea FC",
-            "slug" => "chelsea-fc",
-            "penulis" => "raffa",
-            "konten" => "Chelsea juga merupakan satu-satunya klub asal London yang berhasil meraih gelar juara Liga Champions UEFA dan Piala Dunia Antarklub FIFA.",
-
-        ],
+        "judul" => "Bandung",
+        "slug" => "bandung",
+        "penulis" => "PERSIB",
+        "konten" => "PERSIB adalah klub sepak bola Indonesia yang berbasis di Kota Bandung, Jawa Barat, dan saat ini merupakan peserta dari kompetisi tertinggi Indonesia, Liga 1."
+        ]
     ];
 
     public static function ambildata()
     {
-        return self::$data_berita;
+        return Self:: $data_berita;
     }
 
-    public static function caridata($slug)
+    public static function caridata ($slug)
     {
-        $data_beritas = Self::$data_berita;
+        $data_beritas = Self:: $data_berita;
 
-        $new_berita = [];
-        foreach($data_beritas as $berita) 
+            $new_berita = [];
+    foreach($data_beritas as $berita)
+    {
+        if ($berita["slug"] === $slug)
         {
-            if($berita["slug"] === $slug)
-            {
-                $new_berita = $berita;
-            }
+            $new_berita = $berita;
         }
+    }
 
-        return $new_berita;
+    return $new_berita;
+
     }
 }
