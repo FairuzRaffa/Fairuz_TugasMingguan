@@ -9,17 +9,17 @@ class Berita extends Model
 {
        private static $data_berita = [
         [
-        "judul" => "Pekalongan",
-        "slug" => "pekalongan",
-        "penulis" => "PERSIP",
-        "konten" => "PERSIP (Persatuan Sepak Bola Indonesia Pekalongan) adalah klub sepak bola Indonesia yang bermarkas di Kota Pekalongan. Tim ini berkompetisi di Liga 4."
+        "judul" => "Bugatti",
+        "slug" => "Bugatti",
+        "penulis" => "Chiron",
+        "konten" => "Chiron adalah Hypercar dengan performa luar biasa yang dapat memecahkan rekor dunia."
         ],
         
         [
-        "judul" => "Bandung",
-        "slug" => "bandung",
-        "penulis" => "PERSIB",
-        "konten" => "PERSIB adalah klub sepak bola Indonesia yang berbasis di Kota Bandung, Jawa Barat, dan saat ini merupakan peserta dari kompetisi tertinggi Indonesia, Liga 1."
+        "judul" => "Koenigsegg",
+        "slug" => "Koenigsegg",
+        "penulis" => "Agera",
+        "konten" => "Agera adalah mobil supercar dari Koenigsegg yang dikenal dengan kecepatan dan teknologi canggihnya."
         ]
     ];
 
