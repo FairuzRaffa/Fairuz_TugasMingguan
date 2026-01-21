@@ -47,17 +47,17 @@
 
                     <p class="mb-2">
                         📍 <strong>Alamat:</strong><br>
-                        Jl. Kebayoran Lama No.123, Jakarta Selatan, Indonesia
+                        Ngawi, Jawa Timur, Indonesia
                     </p>
 
                     <p class="mb-2">
                         📞 <strong>Telepon:</strong><br>
-                        <a href="tel:081234567890" class="contact-link">0812-3456-7890</a>
+                        <a href="tel:085711294539" class="contact-link">0857-1129-4539</a>
                     </p>
 
                     <p class="mb-3">
                         💬 <strong>WhatsApp:</strong><br>
-                        <a href="https://wa.me/6281234567890" target="_blank" class="contact-link">
+                        <a href="https://wa.me/6285711294539" target="_blank" class="contact-link">
                             Chat via WhatsApp
                         </a>
                     </p>
@@ -65,7 +65,7 @@
                     <!-- MAPS -->
                     <div class="map-box mt-3">
                         <iframe 
-                            src="https://www.google.com/maps?q=Jakarta&output=embed"
+                            src="https://maps.app.goo.gl/M6jARpEjUaNoeWTw6"
                             width="100%" height="200"
                             style="border:0; border-radius:12px;"
                             allowfullscreen=""

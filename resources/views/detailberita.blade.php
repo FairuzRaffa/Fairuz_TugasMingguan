@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
-  <title>Detail Berita | Liga Indonesia</title>
+  <title>Detail Berita </title>
 </head>
 <body style="background-color: #f4f6f7;">
 
@@ -28,7 +28,7 @@
   </div>
 
   <footer class="text-center p-3 bg-dark text-white mt-5">
-    &copy; <?php echo date("Y"); ?> TI UNIMUS | Berita Liga Indonesia
+    &copy; <?php echo date("Y"); ?> TI UNIMUS 
   </footer>
 </body>
 </html>

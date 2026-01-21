@@ -12,7 +12,7 @@
 
             <!-- Title -->
             <h1 class="hero-title fw-bold">
-                FroZZzz<span class="text-primary">TI</span>
+                Frozz<span class="text-primary">ZZ</span>
             </h1>
 
             <!-- Subtitle -->
