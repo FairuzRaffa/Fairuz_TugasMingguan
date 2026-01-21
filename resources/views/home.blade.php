@@ -12,7 +12,7 @@
 
             <!-- Title -->
             <h1 class="hero-title fw-bold">
-                Laravel<span class="text-primary">TI</span>
+                Viruz<span class="text-primary">TI</span>
             </h1>
 
             <!-- Subtitle -->
@@ -24,11 +24,6 @@
 
         </div>
     </div>
-	<footer class="text-center py-4 mt-5">
-    <small class="text-muted">
-        © {{ date('Y') }} LaravelTI. Crafted with Laravel & Passion.
-    </small>
-</footer>
 
 </section>
 @endsection
