@@ -14,9 +14,9 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('profile',[
         "title" => "Profile",
-        "nama" => "Muhammad Alif Fairuz Raffa",
-        "nohp" => "085877661629",
-        "foto" => "images/fairuz.jpg",
+        "nama" => "Fathur Rozaki Raihan Syafaat",
+        "nohp" => "085711294539",
+        "foto" => "images/mim.jpeg",
     ]);
 });
 
