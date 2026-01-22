@@ -65,7 +65,7 @@
                     <!-- MAPS -->
                     <div class="map-box mt-3">
                         <iframe 
-                            src="https://maps.app.goo.gl/M6jARpEjUaNoeWTw6"
+                            src="https://www.google.com/maps/place/Ngawi,+Jawa+Timur/@-7.4107619,111.4407497,13z/data=!3m1!4b1!4m6!3m5!1s0x2e79e59d8b8b8b8b:0x8b8b8b8b8b8b8b8b!8m2!3d-7.4107672!4d111.4433246!16s%2Fm%2F027j0q?entry=ttu"
                             width="100%" height="200"
                             style="border:0; border-radius:12px;"
                             allowfullscreen=""
