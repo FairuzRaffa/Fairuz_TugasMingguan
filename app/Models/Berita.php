@@ -9,17 +9,17 @@ class Berita extends Model
 {
        private static $data_berita = [
         [
-        "judul" => "Bugatti",
-        "slug" => "Bugatti",
-        "penulis" => "Chiron",
-        "konten" => "Chiron adalah Hypercar dengan performa luar biasa yang dapat memecahkan rekor dunia."
+        "judul" => "Pekalongan",
+        "slug" => "pekalongan",
+        "penulis" => "Fairuz",
+        "konten" => "Pekalongan Terkenal dengan Kota Batik."
         ],
         
         [
-        "judul" => "Koenigsegg",
-        "slug" => "Koenigsegg",
-        "penulis" => "Agera",
-        "konten" => "Agera adalah mobil supercar dari Koenigsegg yang dikenal dengan kecepatan dan teknologi canggihnya."
+        "judul" => "Bandung",
+        "slug" => "bandung",
+        "penulis" => "Alip",
+        "konten" => "Bandung memiliki Club yang terkenal dan profesional yaitu Persib Bandung."
         ]
     ];
 
